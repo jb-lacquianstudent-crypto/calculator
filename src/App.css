@@ -1,0 +1,90 @@
+/* Minimal IT Theme */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: 'Consolas', 'Courier New', monospace;
+}
+
+body {
+  background-color: #0d1117;
+  color: #58a6ff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
+.App {
+  text-align: center;
+}
+
+.Header {
+  font-size: 0.9rem;
+  color: #8b949e;
+  margin-bottom: 12px;
+}
+
+.calculator {
+  width: 320px;
+  padding: 20px;
+  background: #161b22;
+  border: 1px solid #30363d;
+  border-radius: 8px;
+}
+
+.display {
+  background-color: #0d1117;
+  border: 1px solid #30363d;
+  border-radius: 6px;
+  height: 60px;
+  font-size: 2rem;
+  color: #3fb950;
+  padding: 0 12px;
+  text-align: right;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  overflow: hidden;
+  white-space: nowrap;
+  margin-bottom: 16px;
+}
+
+.keypad {
+  display: grid;
+  gap: 8px;
+  grid-template-columns: repeat(4, 1fr);
+}
+
+.button {
+  height: 50px;
+  border: 1px solid #30363d;
+  border-radius: 6px;
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: #c9d1d9;
+  background-color: #21262d;
+  cursor: pointer;
+}
+
+.button:hover {
+  background-color: #30363d;
+}
+
+/* Operators (/, *, -, +) */
+.keypad > .button:nth-child(4),
+.keypad > .button:nth-child(8),
+.keypad > .button:nth-child(12),
+.keypad > .button:nth-child(16) {
+  color: #58a6ff;
+}
+
+/* Clear (CLR) Button */
+.keypad > .button:nth-child(13) {
+  color: #f85149;
+}
+
+/* Equals (=) Button */
+.keypad > .button:nth-child(15) {
+  color: #3fb950;
+}
